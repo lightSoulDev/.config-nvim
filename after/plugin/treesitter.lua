@@ -7,7 +7,6 @@ vim.opt.foldenable=false
 
 treesitter.setup {
     ensure_installed = {
-        "help",
         "dockerfile",
         "gitignore",
         "go",
