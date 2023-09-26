@@ -30,8 +30,6 @@ return require('packer').startup(function(use)
         },
     }
 
-    use { "romgrk/barbar.nvim", wants = "nvim-tree/nvim-web-devicons" } -- https://github.com/romgrk/barbar.nvim
-    -- use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
     use { "nvim-lualine/lualine.nvim", wants = "nvim-tree/nvim-web-devicons" }              -- https://github.com/nvim-lualine/lualine.nvim
 
     use "rhysd/vim-clang-format"                                        -- https://github.com/rhysd/vim-clang-format
@@ -42,8 +40,6 @@ return require('packer').startup(function(use)
     use "tpope/vim-commentary"
     use "github/copilot.vim"
 
-    -- use "edluffy/hologram.nvim"
-    --
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -65,44 +61,5 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },             -- Required
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
-    }
-
-    use {
-        'glepnir/dashboard-nvim',
-        event = 'VimEnter',
-        config = function()
-            require('dashboard').setup {
-                theme = 'hyper',
-                config = {
-                    week_header = {
-                        enable = true,
-                    },
-                    shortcut = {
-                        { desc = ' Update', group = '@property', action = 'Lazy update', key = 'u' },
-                        {
-                            icon = ' ',
-                            icon_hl = '@variable',
-                            desc = 'Files',
-                            group = 'Label',
-                            action = 'Telescope find_files',
-                            key = 'f',
-                        },
-                        {
-                            desc = ' Apps',
-                            group = 'DiagnosticHint',
-                            action = 'Telescope app',
-                            key = 'a',
-                        },
-                        {
-                            desc = ' dotfiles',
-                            group = 'Number',
-                            action = 'Telescope dotfiles',
-                            key = 'd',
-                        },
-                    },
-                },
-            }
-        end,
-        requires = { 'nvim-tree/nvim-web-devicons' }
     }
 end)
