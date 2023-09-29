@@ -6,7 +6,6 @@ local opts = { noremap = true, silent = true }
 -- let g:ftplugin_sql_omni_key = '<C-j>' IN LUA
 vim.g.ftplugin_sql_omni_key = "<C-j>"
 
-
 map("n", "Q", "<nop>", opts)
 -- map("n", "<leader>e", ":NvimTreeFindRootDirectory<CR>", opts)
 map("n", "<C-z>", "u", opts)
@@ -19,6 +18,10 @@ map("n", "<A-Left>", "<C-w>h", opts)
 map("n", "<A-Down>", "<C-w>j", opts)
 map("n", "<A-Up>", "<C-w>k", opts)
 map("n", "<A-Right>", "<C-w>l", opts)
+map("n", "<A-h>", "<C-w>h", opts)
+map("n", "<A-j>", "<C-w>j", opts)
+map("n", "<A-k>", "<C-w>k", opts)
+map("n", "<A-l>", "<C-w>l", opts)
 
 map("n", "<A-S-v>", ":sp<CR>", opts)
 map("n", "<A-S-x>", ":vsp<CR>", opts)
@@ -56,3 +59,4 @@ vim.keymap.set("n", "<leader>f", function()
 end)
 
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
