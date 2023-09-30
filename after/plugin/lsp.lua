@@ -30,6 +30,7 @@ cmp.setup({
         {name = 'path'},
         {name = 'nvim_lsp'},
         {name = 'nvim_lua'},
+        {name = 'vim-dadbod-completion'},
         {name = 'buffer', keyword_length = 3},
         {name = 'luasnip', keyword_length = 2},
     },
@@ -41,8 +42,8 @@ cmp.setup({
         ['<C-e>'] = cmp_action.toggle_completion(),
 
         -- tab complete
-        ['<Tab>'] = cmp_action.tab_complete(),
-        ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+        -- ['<Tab>'] = cmp_action.tab_complete(),
+        -- ['<S-Tab>'] = cmp.mapping.select_prev_item(),
 
         -- navigate between snippet placeholder
         ['<C-d>'] = cmp_action.luasnip_jump_forward(),
